@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v5.1.1
+_commit: v5.1.4
 _src_path: gh:Tecnativa/doodba-copier-template
 backup_deletion: false
 backup_dst: null
@@ -10,9 +10,9 @@ backup_tz: UTC
 cidr_whitelist: null
 domains_prod:
   - hosts:
-      - crumges.com
-      - test.crumges.com
-      - qa.crumges.com
+      - gestion.moren.com.ar
+      - test.moren.com.ar
+      - qa.moren.com.ar
 domains_test:
   - hosts:
       - test.crumges.com
