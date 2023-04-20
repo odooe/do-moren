@@ -5,7 +5,7 @@
 [![Deployment data](https://img.shields.io/badge/%E2%9A%92%20demo-test.moren.com.ar-yellow)](http://test.moren.com.ar)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 
-# do-crumges - a Doodba deployment
+# do-moren - a Doodba deployment
 
 This project is a Doodba scaffolding. Check upstream docs on the matter:
 

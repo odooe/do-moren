@@ -36,7 +36,7 @@ repos:
         args:
           - --addons-dir=odoo/custom/src/private
           - --org-name=Mario Nuñez
-          - --repo-name=do-crumges
+          - --repo-name=do-moren
           - --gen-html
           - --branch=15.0
           - --template-filename=.module-readme.rst.j2

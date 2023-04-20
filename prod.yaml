@@ -33,62 +33,62 @@ services:
         Host:gestion.moren.com.ar, test.moren.com.ar,
         qa.moren.com.ar;Path:/longpolling/{anything:.*}
       traefik.longpolling-0.port: 8072
-      traefik.http.middlewares.do-crumges-15-0-prod-buffering.buffering.retryExpression:
+      traefik.http.middlewares.do-moren-15-0-prod-buffering.buffering.retryExpression:
         IsNetworkError() && Attempts() < 5
-      traefik.http.middlewares.do-crumges-15-0-prod-compress.compress: "true"
-      ? traefik.http.middlewares.do-crumges-15-0-prod-forbid-crawlers.headers.customResponseHeaders.X-Robots-Tag
+      traefik.http.middlewares.do-moren-15-0-prod-compress.compress: "true"
+      ? traefik.http.middlewares.do-moren-15-0-prod-forbid-crawlers.headers.customResponseHeaders.X-Robots-Tag
       : "noindex, nofollow"
-      traefik.http.middlewares.do-crumges-15-0-prod-addSTS.headers.forceSTSHeader: "true"
-      traefik.http.middlewares.do-crumges-15-0-prod-forceSecure.redirectScheme.scheme: https
-      traefik.http.middlewares.do-crumges-15-0-prod-forceSecure.redirectScheme.permanent: "true"
-      traefik.http.services.do-crumges-15-0-prod-main.loadbalancer.server.port: 8069
-      traefik.http.services.do-crumges-15-0-prod-longpolling.loadbalancer.server.port: 8072
-      traefik.http.routers.do-crumges-15-0-prod-main-0.rule:
+      traefik.http.middlewares.do-moren-15-0-prod-addSTS.headers.forceSTSHeader: "true"
+      traefik.http.middlewares.do-moren-15-0-prod-forceSecure.redirectScheme.scheme: https
+      traefik.http.middlewares.do-moren-15-0-prod-forceSecure.redirectScheme.permanent: "true"
+      traefik.http.services.do-moren-15-0-prod-main.loadbalancer.server.port: 8069
+      traefik.http.services.do-moren-15-0-prod-longpolling.loadbalancer.server.port: 8072
+      traefik.http.routers.do-moren-15-0-prod-main-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`)
-      traefik.http.routers.do-crumges-15-0-prod-main-0.service: do-crumges-15-0-prod-main
-      traefik.http.routers.do-crumges-15-0-prod-main-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-buffering,
-        do-crumges-15-0-prod-compress, do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-main-secure-0.rule:
+      traefik.http.routers.do-moren-15-0-prod-main-0.service: do-moren-15-0-prod-main
+      traefik.http.routers.do-moren-15-0-prod-main-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-buffering,
+        do-moren-15-0-prod-compress, do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-main-secure-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`)
-      traefik.http.routers.do-crumges-15-0-prod-main-secure-0.service: do-crumges-15-0-prod-main
-      traefik.http.routers.do-crumges-15-0-prod-main-secure-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-buffering,
-        do-crumges-15-0-prod-compress, do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-main-secure-0.tls: "true"
-      traefik.http.routers.do-crumges-15-0-prod-main-secure-0.tls.certResolver: letsencrypt
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-0.rule:
+      traefik.http.routers.do-moren-15-0-prod-main-secure-0.service: do-moren-15-0-prod-main
+      traefik.http.routers.do-moren-15-0-prod-main-secure-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-buffering,
+        do-moren-15-0-prod-compress, do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-main-secure-0.tls: "true"
+      traefik.http.routers.do-moren-15-0-prod-main-secure-0.tls.certResolver: letsencrypt
+      traefik.http.routers.do-moren-15-0-prod-longpolling-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`) &&
         PathPrefix(`/longpolling/`)
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-0.service: do-crumges-15-0-prod-longpolling
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-secure-0.rule:
+      traefik.http.routers.do-moren-15-0-prod-longpolling-0.service: do-moren-15-0-prod-longpolling
+      traefik.http.routers.do-moren-15-0-prod-longpolling-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-longpolling-secure-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`) &&
         PathPrefix(`/longpolling/`)
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-secure-0.service: do-crumges-15-0-prod-longpolling
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-secure-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-secure-0.tls: "true"
-      traefik.http.routers.do-crumges-15-0-prod-longpolling-secure-0.tls.certResolver: letsencrypt
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-0.rule:
+      traefik.http.routers.do-moren-15-0-prod-longpolling-secure-0.service: do-moren-15-0-prod-longpolling
+      traefik.http.routers.do-moren-15-0-prod-longpolling-secure-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-longpolling-secure-0.tls: "true"
+      traefik.http.routers.do-moren-15-0-prod-longpolling-secure-0.tls.certResolver: letsencrypt
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`) &&
         (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`, `/website/info`))
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-0.service: do-crumges-15-0-prod-main
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-buffering,
-        do-crumges-15-0-prod-compress, do-crumges-15-0-prod-forbid-crawlers,
-        do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-secure-0.rule:
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-0.service: do-moren-15-0-prod-main
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-buffering,
+        do-moren-15-0-prod-compress, do-moren-15-0-prod-forbid-crawlers,
+        do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-secure-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`) &&
         (PathPrefix(`/web/`, `/website/info/`) || Path(`/web`, `/website/info`))
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-secure-0.service: do-crumges-15-0-prod-main
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-secure-0.middlewares:
-        do-crumges-15-0-prod-addSTS, do-crumges-15-0-prod-buffering,
-        do-crumges-15-0-prod-compress, do-crumges-15-0-prod-forbid-crawlers,
-        do-crumges-15-0-prod-forceSecure
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-secure-0.tls: "true"
-      traefik.http.routers.do-crumges-15-0-prod-forbiddenCrawlers-secure-0.tls.certResolver: letsencrypt
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-secure-0.service: do-moren-15-0-prod-main
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-secure-0.middlewares:
+        do-moren-15-0-prod-addSTS, do-moren-15-0-prod-buffering,
+        do-moren-15-0-prod-compress, do-moren-15-0-prod-forbid-crawlers,
+        do-moren-15-0-prod-forceSecure
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-secure-0.tls: "true"
+      traefik.http.routers.do-moren-15-0-prod-forbiddenCrawlers-secure-0.tls.certResolver: letsencrypt
 
   db:
     extends:
@@ -103,11 +103,11 @@ services:
     labels:
       traefik.enable: "true"
       traefik.docker.network: "inverseproxy_shared"
-      traefik.tcp.services.do-crumges-15-0-prod-database.loadbalancer.server.port: 5432
-      traefik.do-crumges-15-0-prod-database-0.port: 5432
-      traefik.tcp.routers.do-crumges-15-0-prod-database-0.rule:
+      traefik.tcp.services.do-moren-15-0-prod-database.loadbalancer.server.port: 5432
+      traefik.do-moren-15-0-prod-database-0.port: 5432
+      traefik.tcp.routers.do-moren-15-0-prod-database-0.rule:
         Host(`gestion.moren.com.ar`, `test.moren.com.ar`, `qa.moren.com.ar`)
-      traefik.tcp.routers.do-crumges-15-0-prod-database-0.service: do-crumges-15-0-prod-database
+      traefik.tcp.routers.do-moren-15-0-prod-database-0.service: do-moren-15-0-prod-database
 
 networks:
   default:

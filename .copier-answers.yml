@@ -34,7 +34,7 @@ postgres_username: odoo
 postgres_version: "13"
 project_author: Mario Nuñez
 project_license: no_license
-project_name: do-crumges
+project_name: do-moren
 smtp_canonical_default: null
 smtp_canonical_domains: null
 smtp_default_from: null
