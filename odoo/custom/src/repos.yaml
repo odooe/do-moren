@@ -171,3 +171,12 @@
   target: odooe $ODOO_VERSION
   merges:
     - odooe $ODOO_VERSION
+
+./update-version:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    odooe: https://odooe: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@github.com/odooe/update-version.git
+  target: odooe $ODOO_VERSION
+  merges:
+    - odooe $ODOO_VERSION
