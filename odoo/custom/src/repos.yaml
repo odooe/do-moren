@@ -1,0 +1,173 @@
+# See https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml
+./odoo:
+  defaults:
+    # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+    # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+    # for a sane value of 100 commits)
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ocb: https://github.com/OCA/OCB.git
+    odoo: https://github.com/odoo/odoo.git
+    openupgrade: https://github.com/OCA/OpenUpgrade.git
+  target: odoo $ODOO_VERSION
+  merges:
+    - odoo $ODOO_VERSION
+    # Example of a merge of the PR with the number <PR>
+    # - oca refs/pull/<PR>/head
+
+./sale-reporting:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    OCA: https://github.com/OCA/sale-reporting.git
+  target: OCA $ODOO_VERSION
+  merges:
+    - OCA $ODOO_VERSION
+    - OCA refs/pull/207/head
+
+./crm:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    OCA: https://github.com/OCA/crm.git
+  target: OCA $ODOO_VERSION
+  merges:
+    - OCA $ODOO_VERSION
+    - OCA refs/pull/450/head
+
+./project-reporting:
+  defaults:
+    depth: $DEPTH_MERGE
+  remotes:
+    OCA: https://github.com/OCA/project-reporting.git
+  target: OCA $ODOO_VERSION
+  merges:
+    - OCA $ODOO_VERSION
+    - OCA refs/pull/47/head
+    - OCA refs/pull/48/head
+
+./ingadhoc-account-financial-tools:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-financial-tools.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-account-invoicing:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-invoicing.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-account-payment:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-payment.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-odoo-argentina:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/odoo-argentina.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-argentina-sale:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/argentina-sale.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-odoo-argentina-ee:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/odoo-argentina-ee.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-miscellaneous:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/miscellaneous.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-product:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/product.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-purchase:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/purchase.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-sale:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/sale.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./ingadhoc-stock:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/stock.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
+
+./design-themes:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    design-themes: https://github.com/odoo/design-themes.git
+  target: design-themes $ODOO_VERSION
+  merges:
+    - design-themes $ODOO_VERSION
+
+./enterprise:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    enterprise: https://marionumza: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@github.com/odoo/enterprise.git
+  target: enterprise $ODOO_VERSION
+  merges:
+    - enterprise $ODOO_VERSION
+
+./odooe-app-misc:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    odooe: https://odooe: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@github.com/odooe/app-misc.git
+  target: odooe $ODOO_VERSION
+  merges:
+    - odooe $ODOO_VERSION

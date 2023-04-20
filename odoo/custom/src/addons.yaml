@@ -1,0 +1,89 @@
+# OCA
+account-closing: -'*'
+account-financial-reporting: -'*'
+account-financial-tools: -'*'
+account-invoicing: -'*'
+crm: -'*'
+knowledge: -'*'
+maintenance: -'*'
+manufacture: -'*'
+partner-contact: -'*'
+product-attribute: -'*'
+product-pack: -'*'
+project-reporting: -'*'
+project: -'*'
+purchase-workflow: -'*'
+reporting-engine: -'*'
+sale-reporting: -'*'
+sale-workflow: -'*'
+server-env: -'*'
+server-tools: -'*'
+server-ux: -'*'
+stock-logistics-warehouse: -'*'
+stock-logistics-workflow: -'*'
+timesheet: -'*'
+web: -'*'
+# ADHOC
+ingadhoc-account-financial-tools: -'*'
+ingadhoc-account-invoicing: -'*'
+ingadhoc-account-payment: -*
+ingadhoc-argentina-sale: -*
+ingadhoc-miscellaneous: -'*'
+ingadhoc-odoo-argentina-ee: -'*'
+ingadhoc-odoo-argentina: -'*'
+ingadhoc-product: -'*'
+ingadhoc-purchase: -'*'
+ingadhoc-sale: -'*'
+ingadhoc-stock: -'*'
+# ODOO
+enterprise: -'*'
+design-themes: -'*'
+# MISCELANEOS
+odooe-app-misc:
+  - amount_in_words_invoice
+  - smile_audit
+  - apps_actions_history
+  - access_settings_menu
+  - access_restricted
+  - all_in_one_dynamic_custom_fields
+  - a4o_delivery_slip
+  - invoice_bulk_mailing
+  - combo_product
+  - xf_meeting_management
+  - auto_odoo_db_and_file_backup
+  - crm_second_currency
+  - ctp_hide_menu_user
+  - export_view_pdf
+  - hide_powered_by_and_manage_db
+  - is_chatgpt_integration
+  - odoo_functional_tutorial
+  - om_mass_confirm_cancel
+  - payment_mercadopago
+  - projects_task_checklists
+  - project_detail_report
+  - project_report_pdf
+  - query_deluxe
+  - theme_prime
+  - task_subtask_checklist
+  - google_gdrive
+  - hspl_user_simulation
+  - access_apps
+  - auto_database_backup
+  - birthday_notification_knk
+  - clear_data
+  - crm_maps
+  - custom_pivot_report
+  - generic_read_only_user_app
+  - ir_rule_protected
+  - multi_livechat
+  - subscription_package
+  - sync
+  - sync_odoo2odoo
+  - sync_telegram
+  - sync_whatsapp
+  - smile_document
+  - auto_backup_pro
+  - sh_message
+  - sh_project_custom_checklist
+  - sh_task_subtasks
+  - sh_all_in_one_custom_checklist

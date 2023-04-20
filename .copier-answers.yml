@@ -1,0 +1,44 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v5.1.1
+_src_path: gh:Tecnativa/doodba-copier-template
+backup_deletion: false
+backup_dst: null
+backup_email_from: null
+backup_email_to: null
+backup_image_version: latest
+backup_tz: UTC
+cidr_whitelist: null
+domains_prod:
+  - hosts:
+      - crumges.com
+      - test.crumges.com
+      - qa.crumges.com
+domains_test:
+  - hosts:
+      - test.crumges.com
+gitlab_url: null
+odoo_dbfilter: "%h"
+odoo_initial_lang: es_AR
+odoo_listdb: true
+odoo_oci_image: docker.io/marionumza/do-crumges
+odoo_proxy: traefik
+odoo_version: 15.0
+paths_without_crawlers:
+  - /web
+  - /website/info
+postgres_cidr_whitelist: null
+postgres_dbname: crumges.com
+postgres_exposed: true
+postgres_exposed_port: 5432
+postgres_username: odoo
+postgres_version: "13"
+project_author: Mario Nuñez
+project_license: no_license
+project_name: do-crumges
+smtp_canonical_default: null
+smtp_canonical_domains: null
+smtp_default_from: null
+smtp_relay_host: null
+smtp_relay_port: 587
+smtp_relay_user: null
+smtp_relay_version: "10"
