@@ -15,7 +15,7 @@ domains_prod:
       - qa.moren.com.ar
 domains_test:
   - hosts:
-      - test.crumges.com
+      - test.moren.com.ar
 gitlab_url: null
 odoo_dbfilter: "%h"
 odoo_initial_lang: es_AR
