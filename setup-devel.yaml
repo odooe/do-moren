@@ -11,7 +11,7 @@ version: "2.4"
 
 services:
   odoo:
-    image: docker.io/marionumza/do-crumges:15.0
+    image: docker.io/marionumza/do-moren:15.0
     build:
       context: ./odoo
       args:
