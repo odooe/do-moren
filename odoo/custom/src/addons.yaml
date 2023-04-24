@@ -72,6 +72,7 @@ odooe-app-misc:
   - birthday_notification_knk
   - clear_data
   - crm_maps
+  - generic_security_restriction
   - custom_pivot_report
   - generic_read_only_user_app
   - ir_rule_protected
