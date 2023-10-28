@@ -88,4 +88,3 @@ odooe-app-misc:
   - sh_project_custom_checklist
   - sh_task_subtasks
   - sh_all_in_one_custom_checklist
-update-version: -'*'
