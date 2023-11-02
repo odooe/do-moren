@@ -11,6 +11,8 @@ RUN echo 'deb-src http://http.us.debian.org/debian/ buster main contrib non-free
 
 RUN apt-get update
 
+RUN apt-get update && apt-get install -y postgresql-client-13
+
 RUN apt-get install -y --no-install-recommends python3-libxml2 libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libcups2-dev libssl-dev libssl1.1 swig gcc
 
 RUN pip install M2Crypto==0.38.0
