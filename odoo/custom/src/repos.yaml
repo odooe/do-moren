@@ -148,7 +148,7 @@
   defaults:
     depth: $DEPTH_DEFAULT
   remotes:
-    enterprise: https://marionumza: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@github.com/odoo/enterprise.git
+    enterprise: git@github.com:odoo/enterprise.git.git
   target: enterprise $ODOO_VERSION
   merges:
     - enterprise $ODOO_VERSION
@@ -157,8 +157,9 @@
   defaults:
     depth: $DEPTH_DEFAULT
   remotes:
-    odooe: https://marionumza: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@github.com/odooe/app-misc.git
+    odooe: git@github.com:odooe/app-misc.git
   target: odooe $ODOO_VERSION
   merges:
     - odooe $ODOO_VERSION
 
+git@github.com:odoo/enterprise.git
