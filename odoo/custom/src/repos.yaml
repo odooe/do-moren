@@ -148,7 +148,7 @@
   defaults:
     depth: $DEPTH_DEFAULT
   remotes:
-    enterprise: https://marionumza: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@github.com/odoo/enterprise.git
+    enterprise: git@github.com:odoo/enterprise.git
   target: enterprise $ODOO_VERSION
   merges:
     - enterprise $ODOO_VERSION
